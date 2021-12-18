@@ -64,44 +64,25 @@ void setup() {
   leg2_servo_degs servo_left_back_leg2_deg    ={0, 90, 165};
   leg2_servo_degs servo_right_back_leg2_deg   ={0, 90, 165};
   
-  // put your setup code here, to run once:
     pwm.begin();
     pwm.setPWMFreq(50);  // analog servos run at 50Hz updates
 
-  //initialize servo angle
-
-
 //前左脚
-     
-      //pwm.setPWM(servo_left_front_leg2, 0, map_angle(DEGMIN));//脚を下に
-      pwm.setPWM(servo_left_front_leg2, 0, map_angle(servo_left_front_leg2_deg.down));//脚を上に
-      
-      pwm.setPWM(servo_left_front_leg1, 0, map_angle(servo_left_front_leg1_deg.straight));////脚を正面に
-      //pwm.setPWM(servo_left_front_leg1, 0, map_angle(105));//turn right 90 degree脚をサイドに
+      pwm.setPWM(servo_left_front_leg2, 0, map_angle(servo_left_front_leg2_deg.down));
+      pwm.setPWM(servo_left_front_leg1, 0, map_angle(servo_left_front_leg1_deg.straight));
 
 //前右脚
-
-     //pwm.setPWM(servo_right_front_leg2, 0, map_angle(DEGMIN));//脚を下に
-     pwm.setPWM(servo_right_front_leg2, 0, map_angle(servo_right_front_leg2_deg.down));//脚を上に
-     
-     pwm.setPWM(servo_right_front_leg1, 0, map_angle(servo_right_front_leg1_deg.straight));//脚を正面に
-     //pwm.setPWM(servo_right_front_leg1, 0, map_angle(60));//脚をサイドに
+      pwm.setPWM(servo_right_front_leg2, 0, map_angle(servo_right_front_leg2_deg.down));     
+      pwm.setPWM(servo_right_front_leg1, 0, map_angle(servo_right_front_leg1_deg.straight));
 
 //後ろ左脚
-
-     //pwm.setPWM(servo_left_back_leg2, 0, map_angle(DEGMIN));//脚を下に
-     pwm.setPWM(servo_left_back_leg2, 0, map_angle(servo_left_back_leg2_deg.down));//脚を上に
-     
-     pwm.setPWM(servo_left_back_leg1, 0, map_angle(servo_left_back_leg1_deg.straight));//脚を正面に
-     //pwm.setPWM(servo_left_back_leg1, 0, map_angle(60));//脚をサイドに
-     
+      pwm.setPWM(servo_left_back_leg2, 0, map_angle(servo_left_back_leg2_deg.down));//脚を上に
+      pwm.setPWM(servo_left_back_leg1, 0, map_angle(servo_left_back_leg1_deg.straight));//脚を正面に
+      
 //後ろ右脚
 
-     //pwm.setPWM(servo_right_back_leg2, 0, map_angle(DEGMIN));//脚を下に
-     pwm.setPWM(servo_right_back_leg2, 0, map_angle(servo_right_back_leg2_deg.down));//脚を上に
-     
-     pwm.setPWM(servo_right_back_leg1, 0, map_angle(servo_right_back_leg1_deg.straight));//脚を正面に
-     //pwm.setPWM(servo_right_back_leg1, 0, map_angle(105));//turn left 90 degree
+      pwm.setPWM(servo_right_back_leg2, 0, map_angle(servo_right_back_leg2_deg.down));
+      pwm.setPWM(servo_right_back_leg1, 0, map_angle(servo_right_back_leg1_deg.straight));
 
 
 }
